@@ -7,3 +7,6 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=aeskrynchenko78_frontend-project-46&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=aeskrynchenko78_frontend-project-46)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=aeskrynchenko78_frontend-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=aeskrynchenko78_frontend-project-46)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=aeskrynchenko78_frontend-project-46&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=aeskrynchenko78_frontend-project-46)
+
+### Demo
+[![asciicast](https://asciinema.org/a/ID.svg)](https://asciinema.org/a/ID)
