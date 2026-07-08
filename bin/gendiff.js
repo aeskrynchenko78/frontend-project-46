@@ -11,10 +11,9 @@ program
   .version('1.0.0')
   .arguments('<filepath1> <filepath2>')
   .option('-f, --format [type]', 'output format')
-  .action((filepath1, filepath2, options) => {
-    // Пока просто вызовем функцию genDiff и выведем результат
-    // options.format будет содержать выбранный формат (пока используем заглушку)
-    const diff = genDiff(filepath1, filepath2, options.format)
+  .action((filepath1, filepath2) => {
+    // Вызываем функцию с путями
+    const diff = genDiff(filepath1, filepath2)
     console.log(diff)
   })
 
