@@ -1,0 +1,27 @@
+{
+  "name": "frontend-project-46",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/aeskrynchenko78/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/aeskrynchenko78/frontend-project-46/actions)",
+  "homepage": "https://github.com/aeskrynchenko78/frontend-project-46#readme",
+  "bugs": {
+    "url": "https://github.com/aeskrynchenko78/frontend-project-46/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeskrynchenko78/frontend-project-46.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "js-yaml": "^5.2.1"
+  }
+}
