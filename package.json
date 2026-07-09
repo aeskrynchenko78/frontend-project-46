@@ -18,8 +18,7 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
-    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage --coverageReporters=lcov",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage --coverageReporters=lcov",
     "lint": "eslint ."
   },
   "dependencies": {
