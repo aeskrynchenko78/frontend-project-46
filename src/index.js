@@ -10,12 +10,12 @@ const genDiff = (filepath1, filepath2) => {
   // Иммутабельно получаем уникальные ключи и сортируем с помощью lodash
   // _.union объединяет массивы и убирает дубликаты
   // _.sortBy сортирует, не изменяя исходный массив
-  const sortedKeys = _.sortBy(_.union(Object.keys(data1), Object.keys(data2)))
+  const sortedKeys = sortBy(union(Object.keys(data1), Object.keys(data2)))
 
   // Формируем строки с различиями (map возвращает новый массив, не мутируя старый)
   const diffLines = sortedKeys.map((key) => {
-    const hasInFile1 = _.has(data1, key)
-    const hasInFile2 = _.has(data2, key)
+    const hasInFile1 = has(data1, key)
+    const hasInFile2 = has(data2, key)
 
     if (!hasInFile1) {
       // Ключ добавлен
