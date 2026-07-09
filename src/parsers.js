@@ -1,19 +1,20 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 
-// Функция для получения данных из файла
 const parseFile = (filepath) => {
-  // path.resolve превращает относительный путь в абсолютный
-  // от того места, откуда запущена команда (process.cwd())
-  const absolutePath = path.resolve(filepath)
+  const absolutePath = path.resolve(process.cwd(), filepath)
 
-  // Читаем файл синхронно
+  // Добавляем проверку: существует ли файл и файл ли это
+  if (!fs.existsSync(absolutePath)) {
+    throw new Error(`File not found: ${absolutePath}`)
+  }
+  if (!fs.lstatSync(absolutePath).isFile()) {
+    throw new Error(`Path is not a file: ${absolutePath}`)
+  }
+
   const data = fs.readFileSync(absolutePath, 'utf-8')
-
-  // Определяем расширение файла
   const ext = path.extname(absolutePath).toLowerCase()
 
-  // Пока поддерживаем только JSON
   if (ext === '.json') {
     return JSON.parse(data)
   }

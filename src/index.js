@@ -1,4 +1,6 @@
-import _ from 'lodash';
+import sortBy from 'lodash/sortBy.js'
+import union from 'lodash/union.js'
+import has from 'lodash/has.js'
 import parseFile from './parsers.js'
 
 const genDiff = (filepath1, filepath2) => {
@@ -17,7 +19,7 @@ const genDiff = (filepath1, filepath2) => {
 
     if (!hasInFile1) {
       // Ключ добавлен
-      return `  + ${key}: ${data2[key]}`;
+      return `  + ${key}: ${data2[key]}`
     }
     if (!hasInFile2) {
       // Ключ удален
