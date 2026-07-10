@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { load } from 'js-yaml'
 
 const parseFile = (filepath) => {
   // Защита от path traversal согласно рекомендациям SonarCloud
@@ -35,6 +36,10 @@ const parseFile = (filepath) => {
 
   if (ext === '.json') {
     return JSON.parse(data)
+  }
+
+  if (ext === '.yaml' || ext === '.yml') {
+    return load(data)
   }
 
   throw new Error(`Unsupported file format: ${ext}`)

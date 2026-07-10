@@ -39,4 +39,24 @@ describe('genDiff - flat JSON comparison', () => {
     const hasChanges = result.split('\n').some((line) => /^\s*[+-]/.test(line))
     expect(hasChanges).toBe(false)
   })
+
+  test('should compare two flat YAML files correctly', () => {
+    const filepath1 = getFixturePath('file1.yml')
+    const filepath2 = getFixturePath('file2.yaml')
+    const expected = readFixture('expected-flat.txt')
+
+    const result = genDiff(filepath1, filepath2)
+
+    expect(result).toBe(expected)
+  })
+
+  test('should compare JSON and YAML files (mixed formats)', () => {
+    const filepath1 = getFixturePath('file1.json')
+    const filepath2 = getFixturePath('file2.yaml')
+    const expected = readFixture('expected-flat.txt')
+
+    const result = genDiff(filepath1, filepath2)
+
+    expect(result).toBe(expected)
+  })
 })
