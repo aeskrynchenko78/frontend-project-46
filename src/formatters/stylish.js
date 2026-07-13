@@ -22,19 +22,19 @@ const stylish = (tree) => {
     switch (node.type) {
       case 'nested': {
         const lines = node.children.flatMap((child) => iter(child, depth + 1))
-        return `${indent(depth)}  ${node.key}: {\n${lines.join('\n')}\n${bracketIndent(depth)}}`
+        return [`${indent(depth)}  ${node.key}: {\n${lines.join('\n')}\n${bracketIndent(depth)}}`]
       }
       case 'added':
-        return `${indent(depth)}+ ${node.key}: ${stringify(node.value, depth)}`
+        return [`${indent(depth)}+ ${node.key}: ${stringify(node.value, depth)}`]
       case 'deleted':
-        return `${indent(depth)}- ${node.key}: ${stringify(node.value, depth)}`
+        return [`${indent(depth)}- ${node.key}: ${stringify(node.value, depth)}`]
       case 'changed':
         return [
           `${indent(depth)}- ${node.key}: ${stringify(node.oldValue, depth)}`,
           `${indent(depth)}+ ${node.key}: ${stringify(node.newValue, depth)}`,
         ]
       case 'unchanged':
-        return `${indent(depth)}  ${node.key}: ${stringify(node.value, depth)}`
+        return [`${indent(depth)}  ${node.key}: ${stringify(node.value, depth)}`]
       default:
         throw new Error(`Unknown node type: ${node.type}`)
     }
