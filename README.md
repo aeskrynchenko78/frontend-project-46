@@ -12,4 +12,4 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=aeskrynchenko78_frontend-project-46&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=aeskrynchenko78_frontend-project-46)
 
 ### Demo
-[![asciicast](https://asciinema.org/a/ID.svg)](https://asciinema.org/a/ID)
+[![asciicast](https://asciinema.org/a/HgwD4LtzhiKRopV3.svg)](https://asciinema.org/a/HgwD4LtzhiKRopV3)
